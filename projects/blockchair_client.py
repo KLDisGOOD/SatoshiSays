@@ -6,7 +6,7 @@ from typing import Dict, List, Literal, Optional, Tuple
 
 import requests
 
-from projects.config import settings
+from config import settings
 
 
 AllowedChain = Literal[

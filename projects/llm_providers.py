@@ -4,7 +4,7 @@ import httpx
 from langchain_openai import ChatOpenAI
 from langchain_core.embeddings import Embeddings
 
-from projects.config import settings
+from config import settings
 try:
     from gradio_client import Client as GradioClient  # type: ignore
 except Exception:

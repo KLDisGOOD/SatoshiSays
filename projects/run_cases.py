@@ -3,8 +3,8 @@ from __future__ import annotations
 import json
 from typing import Any, Dict, List, Optional
 
-from projects.rag_pipeline import plan_api_call
-from projects.blockchair_client import BlockchairClient
+from rag_pipeline import plan_api_call
+from blockchair_client import BlockchairClient
 
 
 TEST_CASES_JSON = r"""

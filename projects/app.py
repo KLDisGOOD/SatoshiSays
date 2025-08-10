@@ -11,11 +11,11 @@ import pandas as pd
 import plotly.express as px
 from streamlit_js_eval import streamlit_js_eval
 
-from projects.blockchair_client import ApiCallPlan as ApiCallPlanRuntime
-from projects.blockchair_client import BlockchairClient, PaginationPlan as RuntimePagination
-from projects.config import settings
-from projects.llm_providers import get_oss_llm
-from projects.rag_pipeline import ApiCallPlan, load_retriever, plan_api_call, synthesize_answer
+from blockchair_client import ApiCallPlan as ApiCallPlanRuntime
+from blockchair_client import BlockchairClient, PaginationPlan as RuntimePagination
+from config import settings
+from llm_providers import get_oss_llm
+from rag_pipeline import ApiCallPlan, load_retriever, plan_api_call, synthesize_answer
 
 
 st.set_page_config(page_title=settings.APP_TITLE, layout="wide")

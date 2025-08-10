@@ -8,8 +8,8 @@ from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 
-from projects.config import settings
-from projects.llm_providers import get_embeddings
+from config import settings
+from llm_providers import get_embeddings
 
 
 DOCS_START_URL = "https://blockchair.com/api/docs"
