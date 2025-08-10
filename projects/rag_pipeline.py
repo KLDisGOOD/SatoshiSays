@@ -10,9 +10,9 @@ from langchain_core.embeddings import Embeddings
 from langchain_community.vectorstores import FAISS
 from pydantic import BaseModel, Field
 
-from projects.blockchair_client import AllowedChain
-from projects.config import settings
-from projects.llm_providers import get_chat_llm, get_embeddings
+from blockchair_client import AllowedChain
+from config import settings
+from llm_providers import get_chat_llm, get_embeddings
 
 
 class PaginationPlan(BaseModel):
