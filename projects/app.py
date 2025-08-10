@@ -5,16 +5,10 @@ import os
 import re
 import sys
 from typing import List
-
-# Ensure the package root is importable when running via Streamlit
-CURRENT_DIR = os.path.dirname(__file__)
-PARENT_DIR = os.path.abspath(os.path.join(CURRENT_DIR, os.pardir))
-if PARENT_DIR not in sys.path:
-    sys.path.insert(0, PARENT_DIR)
+import streamlit as st
 
 import pandas as pd
 import plotly.express as px
-import streamlit as st
 from streamlit_js_eval import streamlit_js_eval
 
 from projects.blockchair_client import ApiCallPlan as ApiCallPlanRuntime
@@ -23,7 +17,16 @@ from projects.config import settings
 from projects.llm_providers import get_oss_llm
 from projects.rag_pipeline import ApiCallPlan, load_retriever, plan_api_call, synthesize_answer
 
+
 st.set_page_config(page_title=settings.APP_TITLE, layout="wide")
+
+# Ensure the package root is importable when running via Streamlit
+CURRENT_DIR = os.path.dirname(__file__)
+PARENT_DIR = os.path.abspath(os.path.join(CURRENT_DIR, os.pardir))
+if PARENT_DIR not in sys.path:
+    sys.path.insert(0, PARENT_DIR)
+
+
 st.title(settings.APP_TITLE)
 
 with st.sidebar:
